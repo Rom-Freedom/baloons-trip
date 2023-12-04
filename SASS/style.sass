@@ -22,7 +22,7 @@ body
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
     &__logo
         position: absolute
-        top: 50px
+        top: 40px
         left: 50px
         width: 56px
         height: 70px
@@ -45,6 +45,10 @@ body
         line-height: 60px
         text-transform: uppercase
         margin-bottom: 10px
+        animation-name: LeftToRight
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing: ease
     &__secondary
         display: block
         font-size: 40px
@@ -52,3 +56,31 @@ body
         letter-spacing: 5px
         line-height: 48px
         margin-bottom: 50px
+        animation-name: RightToLeft
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing: ease
+
+/* ANIMATION WITH KeyFrames */
+@keyframes LeftToRight
+    0%
+        opacity: 0
+        transform: translateX(-100px)
+    80%
+        transform: translateX(10px)
+
+    100%
+        opacity: 1
+        transform: translateX(0px)
+
+@keyframes RightToLeft
+    0%
+        opacity: 0
+        transform: translateX(100px)
+    80%
+        transform: translateX(-10px)
+
+    100%
+        opacity: 1
+        transform: translateX(0px)
+        
