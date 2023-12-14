@@ -1,3 +1,12 @@
+$color-gray: #777777
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+$color-black: #000
+$color-white: #fff
+$color-hover: #b0a0a0
+$box-shadow: (8px 4px 4px rgba(0, 0, 0, 0.3))
+
+
 *,  ::after, before
     margin: 0
     padding: 0
@@ -9,11 +18,11 @@ html
 body
     font-family: 'Roboto', sans-serif
     font-weight: 400
-    color: #777777
+    color: $color-gray
     font-size: 1.6rem
     letter-spacing: .2rem
     padding: 5rem
-    background-color: #fff
+    background-color: $color-white
 
 .container
     background-color: #F7F7F7
@@ -21,7 +30,7 @@ body
 .header
     position: relative
     height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url(../img/header-img.jpg) center / cover no-repeat
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%), url(../img/header-img.jpg) center / cover no-repeat
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
     &__logo
         position: absolute
@@ -38,7 +47,7 @@ body
         text-align: center
 
 .title-first
-    color: #fff
+    color: $color-white
     font-family: 'Roboto'
     &__main
         display: block
@@ -71,27 +80,27 @@ body
         text-transform: uppercase
         text-decoration: none
         padding: 1.5rem 4rem
-        color: #777
-        background: #fff
+        color: $color-gray
+        background: $color-white
         border-radius: 5rem
         display: inline-block
         transition: all .5s
         position: relative
         font-size: 2rem
     &:hover
-        background: #b0a0a0
-        color: #fff
+        background: $color-hover
+        color: $color-white
         transform: translateY(-4px)
-        box-shadow: (8px 4px 4px rgba(0, 0, 0, 0.3))
+        box-shadow: $box-shadow
         &::after
             opacity: 0
             transform: scaleX(1.5) scaleY(1.7)
     &:active
         transform: translateY(-2px)
-        box-shadow: (8px 4px 4px rgba(0, 0, 0, 0.1))
+        box-shadow: $box-shadow
     &::after
         content: ''
-        background: #fff
+        background: $color-white
         width: 100%
         height: 100%
         border-radius: 5rem
