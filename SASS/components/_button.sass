@@ -9,6 +9,10 @@
         position: relative
         font-size: 2rem
         border: none
+        @include respond(tab-land)
+            font-size: 1.8rem
+            padding: 1.5rem 3.7rem
+
     &:hover
         background: $color-hover
         color: $color-white
